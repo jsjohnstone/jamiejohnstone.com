@@ -406,6 +406,9 @@ html a.social-link:hover:before {
 	}
 	
 /* Big Social Icons */
+.social-big {
+	font-size: 16px; width: 42px; line-height: 42px;
+	}
 .is-social-big .social-link:before {
 	font-size: 16px; width: 42px; line-height: 42px;
 	}
@@ -464,6 +467,9 @@ html a.social-link:hover:before {
 
 
 /* LINK HOVER EFFECTS */
+.link {
+  position: relative; text-decoration: none; display: inline-block; color: inherit;
+	}
 
 /* LINK 1 */
 .link-1 {
