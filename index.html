@@ -49,7 +49,7 @@
         <div class="content">
     	
             <!-- PROFILE IMAGE -->
-            <img class="profile-image rounded" src="images/Headshot.png" alt="profile image of Jamie"/>
+            <img class="profile-image rounded" src="images/Headshot_Zoomed.png" alt="profile image of Jamie"/>
             
             <!-- TITLE -->
 			<p>
@@ -68,7 +68,7 @@
 			<p>I love crafting awesome experiences - whether that be a disruptive new web app or a mind-blowing festival. </p>
 
 			<p>
-				<b>Got a cool project in mind? &nbsp;&nbsp;<a class="link-2 highlight" href="mailto:j@miej.co">Get In Touch.</a></b>
+				<b>Got a cool project in mind? &nbsp;&nbsp;<a class="link-2 highlight slide_open" href="mailto:j@miej.co">Get In Touch.</a></b>
 			</p>
     
             
@@ -86,9 +86,46 @@
     </div>
     <!-- CONTENT-WRAP -->
 
-    
-    <!-- SCRIPTS -->
+    <!-- CONTACT FORM -->
+
+  	<div id="slide" class="well" style="max-width: 50em; width: 500px; margin-top:0; border-top-left-radius: 0; border-top-right-radius: 0;">
+<h3>Get In Touch</h3>
+<br>Leave your details and I'll be in touch as soon as possible.
+<br><br>
+ <form id="contact" action="" method="post">
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+</div>
+
+
+
+  	<!-- SCRIPTS -->
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
 	<script src="js/main.js"></script>
+
+	<script>
+    	$(document).ready(function() {
+
+      	// Initialize the plugin
+      		$('#slide').popup({
+  				focusdelay: 400, // for smoother slide-in animations on Android
+  				outline: true,
+  				closebutton: true
+			});
+
+ 	   });
+  	</script>
 
 </body>
 </html>
