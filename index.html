@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    <meta name="description" content="Jamie Johnstone. Product & Operations Manager." />
+    <meta name="author" content="Jamie Johnstone">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>Jamie Johnstone. Product & Operations Manager.</title>
+    
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="images/ico/hand.ico">
+    <link rel="apple-touch-icon" href="images/ico/hand.png"/>
+    
+    <!-- FONTS -->
+    <link rel="stylesheet" type="text/css" href="css/fonts/hk-grotesk/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts/fontello/css/fontello.css">
+    
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	
+    
+    <!-- CONTENT-WRAP -->
+    <div class="content-wrap">
+    	
+        <!-- CONTENT -->
+        <div class="content">
+    	
+            <!-- PROFILE IMAGE -->
+            <img class="profile-image rounded" src="images/Headshot.png" alt="profile image of Jamie"/>
+            
+            <!-- TITLE -->
+			<p><h1>I'm Jamie <img src="images/hand.png" style="height: 1em;"></h1><br>
+				<h1><span id="typed"></span></h1><br>
+			<h3>Based in London, UK. Made in Auckland, NZ. </h3>
+                <div id="typed-strings">
+                    <p><span class="text yellow">Product Manager.</span></p>
+					<p><span class="text green">Operations Geek.</span></p>
+					<p><span class="text pink">Live Events Fanatic.</span></p>
+				</div></p>
+            <!-- TITLE -->
+            
+            <!-- DESCRIPTION -->
+			<p>I love crafting awesome experiences - whether that be a disruptive new web app or a mind-blowing festival. </p>
+
+			<p><b>Got a cool project in mind?</b> <a class="link-2 contactform_open" href="#">Get In Touch.</a></p>
+    
+            
+            <p>
+				<i class="icon-linkedin-squared"></i>
+				<i class="icon-github-circled"></i>
+				<i class="icon-instagram"></i>
+            </p>
+    
+            <!-- DESCRIPTION -->
+        
+        </div>
+    	<!-- CONTENT -->
+        
+    </div>
+    <!-- CONTENT-WRAP -->
+	
+	  <!-- Add content to the popup -->
+  <div id="contactform">
+    <h3>Get In Touch</h3>
+	  <!-- modify this form HTML and place wherever you want your form -->
+
+<form id="my-form"
+  action="https://formspree.io/meqqlejw"
+  method=lMepav!hUNVPQXa2YQ1kD07N^mq"POST">
+  <label>Email:</label><br>
+  <input class="input_contact" type="email" name="email" /><br>
+  <label>Message:</label><br>
+  <input class="input_contact" type="text" name="message" /><br>
+  <button class="input_button" id="my-form-button">Submit</button>
+  <p id="my-form-status"></p>
+</form>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+    
+    var form = document.getElementById("my-form");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
+
+    // Success and Error functions for after the form is submitted
+    
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.innerHTML = "Thanks!";
+    }
+
+    function error() {
+      status.innerHTML = "Oops! There was a problem.";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+  
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+</script>
+    <!-- Add a button to close the popup (optional) -->
+    <button class="contactform_close">Close</button>
+  </div>
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+  <!-- Include jQuery Popup Overlay -->
+  <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js">
+  </script>
+
+  <script>
+    $(document).ready(function() {
+
+      // Initialize the plugin
+	  $('#contactform').popup({
+  color: 'white',
+  opacity: 0.9,
+  transition: '0.3s',
+  scrolllock: true
+});
+
+    });
+  </script>
+	
+    
+    
+    <!-- SCRIPTS -->
+	<script src="js/main.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-light-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    display: inline;
+}
+
+.input_contact {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 20px;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.input_button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #000000;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#standalone {
+  transform: scale(0.8);
+}
+.popup_visible #standalone {
+  transform: scale(1);
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-lightitalic-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-lightitalic-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-regular-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-italic-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-medium-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-mediumitalic-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-mediumitalic-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-semibold-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-semibolditalic-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-semibolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-bold-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('font/hkgrotesk-bolditalic-webfont.woff2') format('woff2'),
+         url('font/hkgrotesk-bolditalic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
