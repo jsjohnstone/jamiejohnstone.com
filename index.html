@@ -48,13 +48,13 @@
             <!-- DESCRIPTION -->
 			<p>I love crafting awesome experiences - whether that be a disruptive new web app or a mind-blowing festival. </p>
 
-			<p><b>Got a cool project in mind?</b> <a class="link-2 contactform_open" href="#">Get In Touch.</a></p>
+			<p><b>Got a cool project in mind?</b> <a class="link-2" href="mailto:j@miej.co">Get In Touch.</a></p>
     
             
             <p>
-				<i class="icon-linkedin-squared"></i>
-				<i class="icon-github-circled"></i>
-				<i class="icon-instagram"></i>
+						    <a class="link" href="https://www.linkedin.com/in/jsjohnstone"><i class="icon-linkedin-squared"></i></a>
+		    <a class="link" href="https://www.github.com/jsjohnstone"><i class="icon-github-circled"></i></a>
+		    <a class="link" href="https://www.instagram.com/jsjohnstone"><i class="icon-instagram"></i></a>
             </p>
     
             <!-- DESCRIPTION -->
@@ -64,96 +64,7 @@
         
     </div>
     <!-- CONTENT-WRAP -->
-	
-	  <!-- Add content to the popup -->
-  <div id="contactform">
-    <h3>Get In Touch</h3>
-	  <!-- modify this form HTML and place wherever you want your form -->
 
-<form id="my-form"
-  action="https://formspree.io/meqqlejw"
-  method=lMepav!hUNVPQXa2YQ1kD07N^mq"POST">
-  <label>Email:</label><br>
-  <input class="input_contact" type="email" name="email" /><br>
-  <label>Message:</label><br>
-  <input class="input_contact" type="text" name="message" /><br>
-  <button class="input_button" id="my-form-button">Submit</button>
-  <p id="my-form-status"></p>
-</form>
-
-<script>
-  window.addEventListener("DOMContentLoaded", function() {
-
-    // get the form elements defined in your form HTML above
-    
-    var form = document.getElementById("my-form");
-    var button = document.getElementById("my-form-button");
-    var status = document.getElementById("my-form-status");
-
-    // Success and Error functions for after the form is submitted
-    
-    function success() {
-      form.reset();
-      button.style = "display: none ";
-      status.innerHTML = "Thanks!";
-    }
-
-    function error() {
-      status.innerHTML = "Oops! There was a problem.";
-    }
-
-    // handle the form submission event
-
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-  });
-  
-  // helper function for sending an AJAX request
-
-  function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-  }
-</script>
-    <!-- Add a button to close the popup (optional) -->
-    <button class="contactform_close">Close</button>
-  </div>
-
-  <!-- Include jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
-  <!-- Include jQuery Popup Overlay -->
-  <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js">
-  </script>
-
-  <script>
-    $(document).ready(function() {
-
-      // Initialize the plugin
-	  $('#contactform').popup({
-  color: 'white',
-  opacity: 0.9,
-  transition: '0.3s',
-  scrolllock: true
-});
-
-    });
-  </script>
-	
-    
     
     <!-- SCRIPTS -->
 	<script src="js/main.js"></script>
