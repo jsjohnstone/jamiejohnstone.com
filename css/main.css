@@ -98,6 +98,10 @@ p:last-child {
 	3. HELPERS (@helpers) - shorthand helper styles
 	
     -------------------------------------------- */ 
+.inlineimg {
+	height: 1em;
+}
+
 .rounded {
 	border-radius: 50%;
 	}
