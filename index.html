@@ -103,7 +103,7 @@
     </fieldset>
     <p id="slide-contact-status"></p>
     <fieldset>
-      <button name="submit" type="submit" id="slide-contact-submit" data-submit="...Sending">Submit</button>
+      <button type="button" onClick="submitToAPI(event)">Submit</button>
     </fieldset>
   </form>
 </div>
@@ -134,7 +134,8 @@
   	<!-- CONTACT FORM HANDLER -->
 
   	<SCRIPT>
-  	$("#slide-contact-submit").click(function() {
+  	function submitToAPI(e) {
+       e.preventDefault();
        var URL = "https://pdubkffb67.execute-api.us-east-1.amazonaws.com/prod/contact";
 
        var name = $("#contact-name").val();
@@ -165,7 +166,7 @@
            // show an error message
            alert("UnSuccessfull");
          }});
-	});
+	}
  	</SCRIPT>
 
 
