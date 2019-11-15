@@ -90,19 +90,20 @@
 
   	<div id="slide" class="well" style="max-width: 100%; width: 500px; margin-top:0; border-top-left-radius: 0; border-top-right-radius: 0;">
 <h3>Get In Touch</h3>
-<br>Leave your details and I'll be in touch as soon as possible.
+<br>Leave your details and I'll be in touch!
 <br><br>
- <form id="contact" action="" method="post">
+ <form id="contact" action="https://formspree.io/meqqlejw" method="POST">
     <fieldset>
       <input placeholder="Your name" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      <input placeholder="Your email address" type="email" tabindex="2" required>
     </fieldset>
       <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
     </fieldset>
+    <p id="slide-contact-status"></p>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <button name="submit" type="submit" id="slide-contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
   </form>
 </div>
@@ -119,13 +120,65 @@
 
       	// Initialize the plugin
       		$('#slide').popup({
-  				focusdelay: 400, // for smoother slide-in animations on Android
-  				outline: true,
+  				color: 'white',
+  				opacity: 1,
+  				transition: '0.3s',
+  				scrolllock: true,
   				closebutton: true
 			});
 
  	   });
   	</script>
+
+
+  	<script>
+  		window.addEventListener("DOMContentLoaded", function() {
+
+   			// get the form elements defined in your form HTML above
+    
+    		var form = document.getElementById("contact");
+    		var button = document.getElementById("slide-contact-submit");
+    		var status = document.getElementById("slide-contact-status");
+
+    		// Success and Error functions for after the form is submitted
+    
+    		function success() {
+      			form.reset();
+      			button.style = "display: none ";
+      			status.innerHTML = "<span class='highlight green'><b>Thanks!</b> Your message has been sent.</span>";
+    		}
+
+    		function error() {
+      			status.innerHTML = "<span class='highlight red'><b>Oops!</b> There was a problem. Please try again.</span>";
+    		}
+
+    		// handle the form submission event
+
+    		form.addEventListener("submit", function(ev) {
+      			ev.preventDefault();
+      			var data = new FormData(form);
+      			status.innerHTML = "<span class='highlight yellow'><b>Sending...</b> Just a moment!</span>";
+      			ajax(form.method, form.action, data, success, error);
+    		});
+  		});
+  
+  		// helper function for sending an AJAX request
+
+  		function ajax(method, url, data, success, error) {
+    		var xhr = new XMLHttpRequest();
+    		xhr.open(method, url);
+    		xhr.setRequestHeader("Accept", "application/json");
+    		xhr.onreadystatechange = function() {
+      			if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      			if (xhr.status === 200) {
+        			success(xhr.response, xhr.responseType);
+      			} else {
+        			error(xhr.status, xhr.response, xhr.responseType);
+      			}
+    		};
+    		xhr.send(data);
+  		}
+	</script>
 
 </body>
 </html>

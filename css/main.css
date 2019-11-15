@@ -113,15 +113,15 @@ p:last-child {
         display:none;
     }
 
-    .well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.05);box-shadow:inset 0 1px 1px rgba(0,0,0,.05)}
+    .well{min-height:20px;padding:19px;margin-bottom:20px;}
     .well .popup_close {
         position: absolute;
-        top: 0;
-        right: 0px;
+        top: 10px;
+        right: 5px;
         border-radius: 2px;
         background: none;
         border: 0;
-        font-size: 25px;
+        font-size: 40px;
         padding: 0 10px;
     }
 
@@ -190,26 +190,15 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #4CAF50;
+  background: #000;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
   font-size: 15px;
 }
 
-#contact button[type="submit"]:hover {
-  background: #43A047;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
-
 #contact button[type="submit"]:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.copyright {
-  text-align: center;
 }
 
 #contact input:focus,
