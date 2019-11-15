@@ -94,12 +94,12 @@
 <br><br>
  <form id="contact" action="https://formspree.io/meqqlejw" method="POST">
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      <input placeholder="Your name" type="text" tabindex="1" name="contact-name" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your email address" type="email" tabindex="2" required>
+      <input placeholder="Your email address" type="email" name="contact-email" tabindex="2" required>
     </fieldset>
-      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+      <textarea placeholder="Type your message here...." name="contact-message" tabindex="5" required></textarea>
     </fieldset>
     <p id="slide-contact-status"></p>
     <fieldset>
@@ -111,7 +111,7 @@
 
 
   	<!-- SCRIPTS -->
-  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
 	<script src="js/main.js"></script>
 
@@ -131,6 +131,45 @@
   	</script>
 
 
+  	<!-- CONTACT FORM HANDLER -->
+
+  	<SCRIPT>
+  	$("#slide-contact-submit").click(function() {
+       var URL = "https://pdubkffb67.execute-api.us-east-1.amazonaws.com/prod/contact";
+
+       var name = $("#contact-name").val();
+       var email = $("#contact-email").val();
+       var message = $("#contact-message").val();
+       var data = {
+          name : name,
+          email : email,
+          message : message
+        };
+
+       $.ajax({
+         type: "POST",
+         url : "https://pdubkffb67.execute-api.us-east-1.amazonaws.com/prod/contact",
+         dataType: "json",
+         crossDomain: "true",
+         contentType: "application/json; charset=utf-8",
+         data: JSON.stringify(data),
+
+         
+         success: function () {
+           // clear form and show a success message
+           alert("Successfull");
+           document.getElementById("contact-form").reset();
+       location.reload();
+         },
+         error: function () {
+           // show an error message
+           alert("UnSuccessfull");
+         }});
+	});
+ 	</SCRIPT>
+
+
+  	<!--
   	<script>
   		window.addEventListener("DOMContentLoaded", function() {
 
@@ -179,6 +218,6 @@
     		xhr.send(data);
   		}
 	</script>
-
+	-->
 </body>
 </html>
