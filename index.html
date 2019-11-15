@@ -94,12 +94,12 @@
 <br><br>
  <form id="contact" method="POST">
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" name="contact-name" required autofocus>
+      <input placeholder="Your name" type="text" tabindex="1" id="contact-name" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your email address" type="email" name="contact-email" tabindex="2" required>
+      <input placeholder="Your email address" type="email" id="contact-email" tabindex="2" required>
     </fieldset>
-      <textarea placeholder="Type your message here...." name="contact-message" tabindex="5" required></textarea>
+      <textarea placeholder="Type your message here...." id="contact-message" tabindex="5" required></textarea>
     </fieldset>
     <p id="slide-contact-status"></p>
     <fieldset>
@@ -136,7 +136,11 @@
   	<SCRIPT>
   	function submitToAPI(e) {
        e.preventDefault();
+
        var URL = "https://pdubkffb67.execute-api.us-east-1.amazonaws.com/prod/contact";
+
+       var status = document.getElementById("slide-contact-status"); 
+       status.innerHTML = "<span class='highlight yellow'><b>Sending...</b> Just a moment!</span>";
 
        var name = $("#contact-name").val();
        var email = $("#contact-email").val();
@@ -158,13 +162,12 @@
          
          success: function () {
            // clear form and show a success message
-           alert("Successfull");
-           document.getElementById("contact-form").reset();
-       location.reload();
+           status.innerHTML = "<span class='highlight green'><b>Thanks!</b> Your message has been sent.</span>";
+           document.getElementById("contact").reset();
          },
          error: function () {
            // show an error message
-           alert("UnSuccessfull");
+           status.innerHTML = "<span class='highlight red'><b>Oops!</b> There was a problem. Please try again.</span>";
          }});
 	}
  	</SCRIPT>
@@ -177,8 +180,8 @@
    			// get the form elements defined in your form HTML above
     
     		var form = document.getElementById("contact");
-    		var button = document.getElementById("slide-contact-submit");
-    		var status = document.getElementById("slide-contact-status");
+  			var button = document.getElementById("slide-contact-submit");
+    		var status = document.getElementById("slide-contact-status");  
 
     		// Success and Error functions for after the form is submitted
     
