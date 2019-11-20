@@ -18,6 +18,58 @@
 			startDelay: 1000,
 			backDelay: 1200
         });
+
+        // CONTACT FORM POPUP
+      	$('#slide').popup({
+      		color: 'white',
+      		opacity: 1,
+      		transition: '0.3s',
+      		scrolllock: true,
+      		closebutton: true
+      	});
+
+
+      		var form = document.getElementById("contact");
+      		var header = document.getElementById("slide-contact-header");
+
+      		form.addEventListener("submit", function(ev) {
+      			ev.preventDefault();
+
+      			var URL = "https://pdubkffb67.execute-api.us-east-1.amazonaws.com/prod/contact";
+      			var status = document.getElementById("slide-contact-status"); 
+      			var button = document.getElementById("slide-contact-submit");
+      			status.innerHTML = "<span class='highlight yellow'><b>Sending...</b> Just a moment!</span>";
+
+      			var name = $("#contact-name").val();
+      			var email = $("#contact-email").val();
+      			var message = $("#contact-message").val();
+      			var data = {
+      				name : name,
+      				email : email,
+      				message : message
+      			};
+
+      			$.ajax({
+      				type: "POST",
+      				url : "https://pdubkffb67.execute-api.us-east-1.amazonaws.com/prod/contact",
+      				dataType: "json",
+      				crossDomain: "true",
+      				contentType: "application/json; charset=utf-8",
+      				data: JSON.stringify(data),
+
+
+      				success: function () {
+           			// clear form and show a success message
+           			status.innerHTML = "<span class='highlight green'><b>Thanks!</b> Your message has been sent.</span>";
+           			document.getElementById("contact").reset();
+           		},
+           		error: function () {
+           			// show an error message
+           			status.innerHTML = "<span class='highlight red'><b>Oops!</b> There was a problem. Please try again.</span>";
+           		}
+           	});
+
+      		});
 	}; // all loaded
 	
 	  
