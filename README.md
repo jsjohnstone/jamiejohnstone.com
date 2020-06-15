@@ -4,7 +4,7 @@ Personal Website Repo hosted at www.jamiejohnstone.com
 ![Deployment](https://github.com/jsjohnstone/jamiejohnstone.com/workflows/Upload%20Website/badge.svg)
 
 ## Infrastructure Diagram
-Coming Soon
+[Infra Diagram](docs/infradiagram.png)
 
 ## Files
     .
