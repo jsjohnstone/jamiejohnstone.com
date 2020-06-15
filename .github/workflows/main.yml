@@ -23,4 +23,4 @@ jobs:
         AWS_REGION: 'eu-west-2' 
         SOURCE_DIR: 'src/.'
         AWS_CF_ID: ${{ secrets.AWS_CF_ID }}  
-        APPEND_FILE: 'index.html'
+        APPEND_FILE: 'src/index.html'
