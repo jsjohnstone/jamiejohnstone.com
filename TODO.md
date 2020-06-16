@@ -3,3 +3,4 @@
 * Find a way to store lambda code in github and push it to the terraform-created lambda
 * Migrate other DNS records into code
 * Deploy `dev` environment in a nice way
+* Separate resources into a separate -infra repo and reference as modules
