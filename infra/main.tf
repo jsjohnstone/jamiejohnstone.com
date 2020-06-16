@@ -57,7 +57,8 @@ resource "aws_acm_certificate" "acm-jamiejohnstone-com" {
         Environment = "Production"
     }
     lifecycle {
-        ignore_changes = [ subject_alternative_names, domain_validation_options ]
+       ignore_changes = [ subject_alternative_names, domain_validation_options ]
+       create_before_destroy = true
     }
 }
 

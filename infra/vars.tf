@@ -13,6 +13,10 @@ variable "domains" {
     "jamesjohnstone.co",
     "jamiejohnstone.com",
     "mesj.co",
-    "miej.co"
+    "miej.co",
+    "miej.co.nz",
+    "miej.co.uk",
+    "jamiejohnstone.co.uk",
+    "jamiejohnstone.co.nz"
     ]
 }
