@@ -2,7 +2,7 @@
 terraform {
     backend "s3" {
         bucket = "jamiejohnstone-com-infra"
-        key    = "tf-state"
+        key = "tf-state"
         region = "eu-west-2"
     }
 }
@@ -10,17 +10,12 @@ terraform {
 # Providers
 # Default to London, N Virginia included for ACM
 provider "aws" {
-    region  = "eu-west-2"
+    region = "eu-west-2"
 }
 
 provider "aws" {
-    region  = "us-east-1"
+    region = "us-east-1"
     alias = "us-east-1"
-}
-
-# Locals
-locals {
-    
 }
 
 # S3 Bucket
@@ -53,7 +48,7 @@ resource "aws_s3_bucket_policy" "s3-jamiejohnstone-com" {
 # CloudFront SSL Certificate
 resource "aws_acm_certificate" "acm-jamiejohnstone-com" {
     provider = aws.us-east-1
-    domain_name       = "jamiejohnstone.com"
+    domain_name = "jamiejohnstone.com"
     validation_method = "DNS"
 
     subject_alternative_names = var.domains
@@ -70,7 +65,7 @@ resource "aws_acm_certificate" "acm-jamiejohnstone-com" {
 resource "aws_cloudfront_distribution" "cf-jamiejohnstone-com" {
     origin {
         domain_name = aws_s3_bucket.s3-jamiejohnstone-com.bucket_regional_domain_name
-        origin_id   = var.s3_origin_id
+        origin_id = var.s3_origin_id
     }
 
     enabled = true
@@ -78,16 +73,16 @@ resource "aws_cloudfront_distribution" "cf-jamiejohnstone-com" {
     comment = "jamiejohnstone.com"
     default_root_object = "index.html"
 
-    aliases = var.domains
+    aliases = setunion(var.domains, formatlist("www.%s", var.domains))
 
     default_cache_behavior {
         target_origin_id = var.s3_origin_id
         viewer_protocol_policy = "redirect-to-https"
-        min_ttl                = 0
-        default_ttl            = 86400
-        max_ttl                = 31536000
-        allowed_methods  = ["GET", "HEAD"]
-        cached_methods   = ["GET", "HEAD"]
+        min_ttl = 0
+        default_ttl = 86400
+        max_ttl = 31536000
+        allowed_methods = ["GET", "HEAD"]
+        cached_methods = ["GET", "HEAD"]
 
         forwarded_values {
             query_string = false
@@ -110,32 +105,41 @@ resource "aws_cloudfront_distribution" "cf-jamiejohnstone-com" {
     }
 
     viewer_certificate {
-        acm_certificate_arn         = aws_acm_certificate.acm-jamiejohnstone-com.arn
-        ssl_support_method          = "sni-only"
-        minimum_protocol_version    = "TLSv1.1_2016"
+        acm_certificate_arn = aws_acm_certificate.acm-jamiejohnstone-com.arn
+        ssl_support_method = "sni-only"
+        minimum_protocol_version = "TLSv1.1_2016"
     }
 }
 
+# Route 53
+# Define Zones
+resource "aws_route53_zone" "r53-zones" {
+    for_each = var.domains
+    name = each.key
+}
+
 # Route 53 Record pointing domain and www. at CloudFront
-resource "aws_route53_record" "r53-jamiejohnstone-com-A" {
-    zone_id = "Z4NVW4V8EWN1T"
-    name    = "jamiejohnstone.com"
-    type    = "A"
+resource "aws_route53_record" "r53-A-FQDN" {
+    for_each = var.domains
+    zone_id = aws_route53_zone.r53-zones[each.key].zone_id
+    name = each.key
+    type = "A"
 
     alias {
-        name    = aws_cloudfront_distribution.cf-jamiejohnstone-com.domain_name
+        name = aws_cloudfront_distribution.cf-jamiejohnstone-com.domain_name
         zone_id = aws_cloudfront_distribution.cf-jamiejohnstone-com.hosted_zone_id
         evaluate_target_health = false
     }
 }
 
-resource "aws_route53_record" "r53-www-jamiejohnstone-com-A" {
-    zone_id = "Z4NVW4V8EWN1T"
-    name    = "www.jamiejohnstone.com"
-    type    = "A"
+resource "aws_route53_record" "r53-A-WWW" {
+    for_each = var.domains
+    zone_id = aws_route53_zone.r53-zones[each.key].zone_id
+    name = "www.${each.key}"
+    type = "A"
 
     alias {
-        name    = aws_cloudfront_distribution.cf-jamiejohnstone-com.domain_name
+        name = aws_cloudfront_distribution.cf-jamiejohnstone-com.domain_name
         zone_id = aws_cloudfront_distribution.cf-jamiejohnstone-com.hosted_zone_id
         evaluate_target_health = false
     }
