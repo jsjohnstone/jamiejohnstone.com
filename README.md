@@ -1,7 +1,7 @@
 # jamiejohnstone.com :wave:
 Personal Website Repo hosted at www.jamiejohnstone.com
 
-![Deployment](https://github.com/jsjohnstone/jamiejohnstone.com/workflows/Upload%20Website/badge.svg)
+![Deploy](https://github.com/jsjohnstone/jamiejohnstone.com/workflows/Deploy/badge.svg?branch=master&event=deployment)
 
 ## Infrastructure Diagram
 ![Infra Diagram](docs/infradiagram.png)
