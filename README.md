@@ -1,7 +1,8 @@
 # jamiejohnstone.com :wave:
-Personal Website Repo hosted at www.jamiejohnstone.com
+Personal Website, hosted on AWS, built using Terraform and Github actions
+This is really the simplest website ever, and more of a learning playground.
 
-![Deploy](https://github.com/jsjohnstone/jamiejohnstone.com/workflows/Deploy/badge.svg?branch=master)
+![AWS](docs/aws.png | height=50) ![Terraform](docs/terraform.png | height=50)
 
 ## Infrastructure Diagram
 ![Infra Diagram](docs/infradiagram.png)
