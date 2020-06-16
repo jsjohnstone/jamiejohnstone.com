@@ -51,13 +51,13 @@ resource "aws_acm_certificate" "acm-jamiejohnstone-com" {
     domain_name = "jamiejohnstone.com"
     validation_method = "DNS"
 
-    subject_alternative_names = var.domains
+    subject_alternative_names = setunion(var.domains, formatlist("*.%s", var.domains))
 
     tags = {
         Environment = "Production"
     }
     lifecycle {
-       ignore_changes = [ subject_alternative_names, domain_validation_options ]
+       #ignore_changes = [ subject_alternative_names, domain_validation_options ]
        create_before_destroy = true
     }
 }
