@@ -24,7 +24,10 @@ The [infra/](infra/) folder contains terraform scripts to deploy (most) of the i
 ## Files
     .
     ├── .github/workflows/       # CI/CD Workflows
-    ├── infra/                   # Infrastructure Code
-    ├── src/                     # Website source
     ├── docs/                    # Additional files used in the project
+    ├── infra/                   # Infrastructure Code
+    |   ├── prod/                # Production Environment
+    |   ├── staging/             # Staging Environment 
+    |   └── resources/           # Terraform Modules for generic web app
+    ├── src/                     # Website source
     └── README.md
