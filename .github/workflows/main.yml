@@ -12,6 +12,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Output ref
+      run: echo $github_ref
+    - name: Output repo
+      run: echo $GITHUB_REPOSITORY
     - name: Checkout latest code
       uses: actions/checkout@master
     - name: Deploy to PRODUCTION
