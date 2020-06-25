@@ -21,13 +21,14 @@ The [infra/](infra/) folder contains terraform scripts to deploy (most) of the i
 * Route 53 Zones and Records for DNS Management
 * ...and S3 Buckets for code storage
 
+These infrastructure scripts use a [jsjohnstone/infra-shared/webapp](https://www.github.com/jsjohnstone/infra-shared/webapp).
+
 ## Files
     .
     ├── .github/workflows/       # CI/CD Workflows
     ├── docs/                    # Additional files used in the project
     ├── infra/                   # Infrastructure Code
     |   ├── prod/                # Production Environment
-    |   ├── staging/             # Staging Environment 
-    |   └── resources/           # Terraform Modules for generic web app
+    |   └── staging/             # Staging Environment 
     ├── src/                     # Website source
     └── README.md
