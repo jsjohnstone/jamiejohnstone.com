@@ -2,17 +2,10 @@
 Code to generate the infrastructure required for deployment of this website to AWS
 
 ## Overview
-This project consists of three folders: resources/, staging/ and prod/.
-
-## resource/
-This folder contains the terraform module that generically builds the following infrastructure:
-* CloudFront Distribution for CDN
-* ACM Certificates for SSL certificate management
-* Route 53 Zones and Records for DNS Management
-* ...and S3 Buckets/Policies for code storage
+This folder contains infrastructure code (in Terraform) used to deploy different project environments.
 
 ## staging/ and prod/
-These two folders contain terraform scripts that consume the above module, but with specific configuration to deploy a staging or production environment.
+These two folders contain terraform scripts that consume a [webapp module](https://www.github.com/jsjohnstone/infra-shared/webapp), but with specific configuration to deploy a staging or production environment.
 
 The staging/ code will deploy infrastructure for *staging.jamiejohnstone.com* whilst the production/ code will deploy the same with a more complex set of domains (I'm a domain hoarder).
 
