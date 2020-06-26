@@ -9,7 +9,7 @@ terraform {
 
 # Using this module
 module "webapp" {
-    source = "github.com/jsjohnstone/infra-shared/modules/webapp"
+    source = "github.com/jsjohnstone/infra-mods-s3webapp"
 
     app = "jamiejohnstone.com"
     region = "eu-west-2"
