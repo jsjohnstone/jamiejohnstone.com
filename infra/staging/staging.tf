@@ -8,8 +8,8 @@ terraform {
 }
 
 # Using this module
-module "main" {
-    source = "github.com/jsjohnstone/infra-shared/webapp"
+module "webapp" {
+    source = "github.com/jsjohnstone/infra-mods-s3webapp"
 
     app = "jamiejohnstone.com"
     region = "eu-west-2"
