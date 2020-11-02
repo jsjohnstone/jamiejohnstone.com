@@ -5,7 +5,7 @@ Code to generate the infrastructure required for deployment of this website to A
 This folder contains infrastructure code (in Terraform) used to deploy different project environments.
 
 ## staging/ and prod/
-These two folders contain terraform scripts that consume a [webapp module](https://www.github.com/jsjohnstone/infra-shared/webapp), but with specific configuration to deploy a staging or production environment.
+These two folders contain terraform scripts that consume a [webapp module](https://www.github.com/jsjohnstone/infra-mods-s3webapp), but with specific configuration to deploy a staging or production environment.
 
 The staging/ code will deploy infrastructure for *staging.jamiejohnstone.com* whilst the production/ code will deploy the same with a more complex set of domains (I'm a domain hoarder).
 
