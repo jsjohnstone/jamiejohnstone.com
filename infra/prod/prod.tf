@@ -16,11 +16,7 @@ module "webapp" {
     app-indexfile = "index.html"
     domains = [ 
         "jamiejohnstone.com",
-        "jamesjohnstone.co",
-        "jamiejohnstone.co.uk",
         "mesj.co",
         "miej.co",
-        "miej.co.uk",
-        "miej.co.nz"
      ]
 }
