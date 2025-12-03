@@ -14,6 +14,16 @@ jobs:
     steps:
     - name: Checkout latest code
       uses: actions/checkout@master
+    - name: Use Node.js 24.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: "24.x"
+    - name: Install Dependencies
+      run: npm ci
+      working-directory: src
+    - name: Export Resume
+      run: npm run build:bold
+      working-directory: src
     - name: Deploy to PRODUCTION
       uses: jsjohnstone/s3-site-deploy@master
       if: github.ref == 'refs/heads/master'
@@ -24,9 +34,9 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'eu-west-2' 
-        SOURCE_DIR: 'src/.'
+        SOURCE_DIR: 'src/export/.'
         AWS_CF_ID: ${{ secrets.AWS_CF_ID }}  
-        APPEND_FILE: 'src/index.html'
+        APPEND_FILE: 'src/export/index.html'
     - name: Deploy to STAGING
       uses: jsjohnstone/s3-site-deploy@master
       if: github.ref == 'refs/heads/staging'
@@ -37,6 +47,6 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'eu-west-2' 
-        SOURCE_DIR: 'src/.'
+        SOURCE_DIR: 'src/export/.'
         AWS_CF_ID: ${{ secrets.AWS_CF_ID_STAGING }}  
-        APPEND_FILE: 'src/index.html'
+        APPEND_FILE: 'src/export/index.html'
