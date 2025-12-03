@@ -1,0 +1,20 @@
+{{#if resume.work.length}}
+	<h2>Employment History</h2>
+	{{#each resume.work}}
+		<h4>{{#if position}}{{position}}{{/if}}{{#if name}}, {{#if url}}<a
+				href="{{url}}">{{name}} <i class="d-print-none fas fa-link fa-xs"></i></a>{{else}}{{name}}{{/if}}{{/if}}</h4>
+		<h5>{{#if location}}{{location}}{{/if}}
+			({{#if startDate}}{{dateFormat startDate format="MMM YYYY"}}{{/if}}
+			{{#if endDate}} — {{dateFormat endDate format="MMM YYYY"}}{{else}} - Present{{/if}})</h5>
+		{{#if keywords.length}}<div>
+			{{#each keywords}}<span class="badge badge-pill work-badge">{{.}}</span> {{/each}}
+		</div>{{/if}}
+		{{#if summary}}<p>{{summary}}</p>{{/if}}
+		{{#if highlights.length}}
+		<ul>
+			{{#each highlights}}<li>{{.}}</li>{{/each}}
+		</ul>
+		{{/if}}
+	{{/each}}
+	<hr>
+{{/if}}

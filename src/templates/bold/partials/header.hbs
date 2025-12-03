@@ -1,0 +1,70 @@
+<header class="header">
+    <div class="header-bg-text">
+        <div class="marquee-row marquee-left">
+            <div class="marquee-content">
+                <span class="marquee-text">JAMIE JOHNSTONE</span>
+                <span class="marquee-text">JAMIE JOHNSTONE</span>
+                <span class="marquee-text">JAMIE JOHNSTONE</span>
+                <span class="marquee-text">JAMIE JOHNSTONE</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-text">JAMIE JOHNSTONE</span>
+                <span class="marquee-text">JAMIE JOHNSTONE</span>
+                <span class="marquee-text">JAMIE JOHNSTONE</span>
+                <span class="marquee-text">JAMIE JOHNSTONE</span>
+            </div>
+        </div>
+        <div class="marquee-row marquee-right marquee-slow">
+            <div class="marquee-content">
+                <span class="marquee-text">PRODUCT MANAGER / TICKETING GEEK / BUILDER /</span>
+                <span class="marquee-text">PRODUCT MANAGER / TICKETING GEEK / BUILDER /</span>
+                <span class="marquee-text">PRODUCT MANAGER / TICKETING GEEK / BUILDER /</span>
+                <span class="marquee-text">PRODUCT MANAGER / TICKETING GEEK / BUILDER /</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-text">PRODUCT MANAGER / TICKETING GEEK / BUILDER /</span>
+                <span class="marquee-text">PRODUCT MANAGER / TICKETING GEEK / BUILDER /</span>
+                <span class="marquee-text">PRODUCT MANAGER / TICKETING GEEK / BUILDER /</span>
+                <span class="marquee-text">PRODUCT MANAGER / TICKETING GEEK / BUILDER /</span>
+            </div>
+        </div>
+        <div class="marquee-row marquee-left marquee-offset marquee-slow">
+            <div class="marquee-content">
+                <span class="marquee-text">ROWER / STAGE MANAGER / DRUMMER /</span>
+                <span class="marquee-text">ROWER / STAGE MANAGER / DRUMMER /</span>
+                <span class="marquee-text">ROWER / STAGE MANAGER / DRUMMER /</span>
+                <span class="marquee-text">ROWER / STAGE MANAGER / DRUMMER /</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-text">ROWER / STAGE MANAGER / DRUMMER /</span>
+                <span class="marquee-text">ROWER / STAGE MANAGER / DRUMMER /</span>
+                <span class="marquee-text">ROWER / STAGE MANAGER / DRUMMER /</span>
+                <span class="marquee-text">ROWER / STAGE MANAGER / DRUMMER /</span>
+        </div>
+    </div>
+    <div class="header-images">
+        <!-- Left side portraits - Theatre Credits -->
+        <div class="portrait-left portrait-far-left portrait-rower portrait-interactive" data-target="stage">
+            <img src="./jamie_rower.png" alt="Jamie Rowing" class="header-portrait portrait-rower-img" onload="this.classList.add('loaded');">
+        </div>
+        <div id="portrait-stagemanager" class="portrait-left portrait-near-left portrait-interactive" data-target="stage" data-nav-primary="true">
+            <img src="./jamie_stagemanager.png" alt="Jamie as Stage Manager" class="header-portrait" onload="this.classList.add('loaded');">
+        </div>
+        
+        <!-- Center portrait (main) -->
+        <div class="portrait-center">
+            <div class="image-loader" id="imageLoader">
+                <div class="loader-spinner"></div>
+            </div>
+            <img src="./jamie_hi.png" alt="Jamie Johnstone" class="header-portrait" id="headerPortrait" onload="this.classList.add('loaded'); document.getElementById('imageLoader').style.display='none';">
+        </div>
+        
+        <!-- Right side portraits - Tech CV -->
+        <div id="portrait-working" class="portrait-right portrait-near-right portrait-interactive" data-target="career" data-nav-primary="true">
+            <img src="./jamie_working.png" alt="Jamie Working" class="header-portrait" onload="this.classList.add('loaded');">
+        </div>
+        <div class="portrait-right portrait-far-right portrait-interactive" data-target="career">
+            <img src="./jamie_drummer.png" alt="Jamie as Drummer" class="header-portrait" onload="this.classList.add('loaded');">
+        </div>
+    </div>
+</header>

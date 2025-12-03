@@ -1,0 +1,61 @@
+<h2 class="section-title">Tech Career</h2>
+{{#if resume.work.length}}
+{{#each resume.work}}
+<article class="work-item">
+    <div class="work-header-row">
+        <div class="work-logo">
+            {{#if logo}}
+            <img src="{{logo}}" alt="{{name}} logo" class="work-logo-img">
+            {{else}}
+            <div class="work-logo-placeholder">
+                <i class="fas fa-building"></i>
+            </div>
+            {{/if}}
+        </div>
+        <div class="work-header">
+            <h3 class="work-position">{{position}}</h3>
+            {{#if name}}
+            {{#if url}}
+            <a href="{{url}}" class="work-company" target="_blank">{{name}} <i class="fas fa-external-link-alt fa-xs"></i></a>
+            {{else}}
+            <span class="work-company">{{name}}</span>
+            {{/if}}
+            {{/if}}
+        </div>
+    </div>
+    <div class="work-meta">
+        {{#if location}}
+        <span class="work-meta-item">
+            <i class="fas fa-map-marker-alt"></i>
+            {{location}}
+        </span>
+        {{/if}}
+        <span class="work-meta-item">
+            <i class="fas fa-calendar"></i>
+            {{#if startDate}}{{dateFormat startDate format="MMM YYYY"}}{{/if}}
+            —
+            {{#if endDate}}{{dateFormat endDate format="MMM YYYY"}}{{else}}Present{{/if}}
+        </span>
+    </div>
+    {{#if summary}}
+    <p class="work-summary">{{summary}}</p>
+    {{/if}}
+    {{#if highlights.length}}
+    <ul class="work-highlights">
+        {{#each highlights}}
+        <li>{{.}}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
+    {{#if keywords.length}}
+    <div class="work-keywords">
+        {{#each keywords}}
+        <span class="keyword-tag">{{.}}</span>
+        {{/each}}
+    </div>
+    {{/if}}
+</article>
+{{/each}}
+{{else}}
+<p>No employment history available.</p>
+{{/if}}

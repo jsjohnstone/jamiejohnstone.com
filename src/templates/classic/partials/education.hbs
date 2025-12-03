@@ -1,0 +1,10 @@
+{{#if resume.education.length}}
+	<h2>Education</h2>
+	{{#each resume.education}}
+		<h4>{{#if studyType}}{{studyType}}{{/if}} {{#if area}}({{area}}){{/if}}</h4>
+		<p>{{#if institution}}{{institution}}{{/if}}
+			({{#if startDate}}{{dateFormat startDate format="YYYY"}}{{/if}}{{#if endDate}} -
+			{{dateFormat endDate format="YYYY"}}{{/if}})</p>
+	{{/each}}
+	<hr>
+{{/if}}

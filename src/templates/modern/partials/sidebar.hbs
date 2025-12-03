@@ -1,0 +1,35 @@
+<!-- Skills Card -->
+{{#if resume.skills.length}}
+<div class="sidebar-card">
+    <h3 class="sidebar-title">Skills</h3>
+    <ul class="skills-list">
+        {{#each resume.skills}}
+        <li class="skill-item">{{name}}</li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}
+
+<!-- Interests Card -->
+{{#if resume.interests.length}}
+<div class="sidebar-card">
+    <h3 class="sidebar-title">Interests</h3>
+    <div class="interests-list">
+        {{#each resume.interests}}
+        <span class="interest-tag">{{name}}</span>
+        {{/each}}
+    </div>
+</div>
+{{/if}}
+
+<!-- Languages Card -->
+{{#if resume.languages.length}}
+<div class="sidebar-card">
+    <h3 class="sidebar-title">Languages</h3>
+    <ul class="skills-list">
+        {{#each resume.languages}}
+        <li class="skill-item">{{language}}{{#if fluency}} — {{fluency}}{{/if}}</li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}

@@ -1,0 +1,29 @@
+<h2 class="section-title">Stage Management Credits</h2>
+{{#if resume.stageCredits.length}}
+<div class="table-wrapper">
+    <table class="credits-table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Role</th>
+                <th>Show</th>
+                <th>Director</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each resume.stageCredits}}
+            <tr>
+                <td class="credit-year">{{year}}</td>
+                <td>{{role}}</td>
+                <td class="credit-show">{{show}}</td>
+                <td>{{director}}</td>
+                <td>{{company}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{else}}
+<p>No stage credits available.</p>
+{{/if}}

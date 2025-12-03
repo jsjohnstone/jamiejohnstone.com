@@ -1,0 +1,18 @@
+<h2 class="section-title">Certifications</h2>
+{{#if resume.awards.length}}
+{{#each resume.awards}}
+<article class="cert-item">
+    <div class="cert-icon">
+        <i class="fas fa-award"></i>
+    </div>
+    <div class="cert-content">
+        <h3 class="cert-title">{{title}}</h3>
+        <p class="cert-meta">
+            {{awarder}}{{#if date}} • {{dateFormat date format="MMM YYYY"}}{{/if}}
+        </p>
+    </div>
+</article>
+{{/each}}
+{{else}}
+<p>No certifications available.</p>
+{{/if}}

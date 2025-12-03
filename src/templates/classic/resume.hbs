@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+        __    _    __  __                   __
+       / /_  (_)  / /_/ /_  ___  ________  / /
+      / __ \/ /  / __/ __ \/ _ \/ ___/ _ \/ / 
+     / / / / /  / /_/ / / /  __/ /  /  __/_/  
+    /_/ /_/_/   \__/_/ /_/\___/_/   \___(_)   
+                                          
+    Thanks for checking out my resume (and behind the scenes!)
+
+    This page is generated automagically from a JSON file and template, both hosted 
+    on Github and built with node and Github Actions.
+
+    For a behind-the-scenes peek, check out: https://github.com/jsjohnstone/resume
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#resume.basics}}{{name}} - {{label}}{{/resume.basics}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c91a1c1eae.js" crossorigin="anonymous"></script>
+
+    <!-- FAV and TOUCH ICONS -->
+	<link rel="shortcut icon" href="./hand.ico">
+</head>
+
+<body>
+
+    <!-- Container -->
+    <Div class="container">
+        <div class="card shadow-lg resume-card">
+            <!-- HEADER -->
+            {{> basics }}
+            <!-- END HEADER -->
+            <!-- BODY -->
+            <div class="card-body">
+                <div class="row">
+                    <!-- RIGHT SECTION -->
+                    <div class="profile-section col-xs-12 col-sm-8 col-lg-9">
+                        {{> summary}}
+                        {{> work}}
+                        {{> projects}}
+                        {{> certificates}}
+                        {{> education}}
+                    </div>
+                    <!-- END RIGHT SECTION -->
+                    <!-- LEFT SECTION-->
+                    <div class="col-xs-12 col-sm-4 col-lg-3 order-sm-first">
+                        {{> skills}}
+                        {{> hobbies}}
+                    </div>
+                    <!-- END LEFT SECTION-->
+                </div>
+            </div>
+            <!-- END BODY-->
+            <!-- FOOTER -->
+            <div class="card-footer text-muted text-center">
+                <a class="sociallinks" href="https://www.github.com/jsjohnstone"> <i class="fab fa-github"></i></a>
+                <a class="sociallinks" href="https://www.linkedin.com/in/jsjohnstone"><i
+                        class="fab fa-linkedin"></i></a>
+                <a class="sociallinks" href="https://www.jamiejohnstone.com"><i class="fas fa-globe-americas"></i></a>
+            </div>
+            <!-- END FOOTER -->
+        </div>
+    </Div>
+    <!-- END CONTAINER -->
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

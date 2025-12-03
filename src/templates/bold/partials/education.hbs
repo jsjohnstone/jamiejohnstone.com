@@ -1,0 +1,20 @@
+<h2 class="section-title">Education</h2>
+{{#if resume.education.length}}
+{{#each resume.education}}
+<article class="edu-item">
+    <div class="edu-icon">
+        <i class="fas fa-graduation-cap"></i>
+    </div>
+    <div class="edu-content">
+        <h3 class="edu-degree">{{studyType}}{{#if area}} ({{area}}){{/if}}</h3>
+        <p class="edu-institution">{{institution}}</p>
+        <p class="edu-dates">
+            {{#if startDate}}{{yearFormat startDate}}{{/if}}
+            {{#if endDate}} — {{yearFormat endDate}}{{/if}}
+        </p>
+    </div>
+</article>
+{{/each}}
+{{else}}
+<p>No education history available.</p>
+{{/if}}

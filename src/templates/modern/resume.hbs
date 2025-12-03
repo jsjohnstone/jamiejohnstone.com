@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<!--
+        __    _    __  __                   __
+       / /_  (_)  / /_/ /_  ___  ________  / /
+      / __ \/ /  / __/ __ \/ _ \/ ___/ _ \/ / 
+     / / / / /  / /_/ / / /  __/ /  /  __/_/  
+    /_/ /_/_/   \__/_/ /_/\___/_/   \___(_)   
+                                          
+    Thanks for checking out my resume (and behind the scenes!)
+
+    This page is generated automagically from a JSON file and template, both hosted 
+    on Github and built with node and Github Actions.
+
+    For a behind-the-scenes peek, check out: https://github.com/jsjohnstone/resume
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#resume.basics}}{{name}} - {{label}}{{/resume.basics}}</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c91a1c1eae.js" crossorigin="anonymous"></script>
+
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="./hand.ico">
+</head>
+
+<body>
+    <!-- Background gradient accents -->
+    <div class="gradient-bg">
+        <div class="gradient-accent gradient-accent-1"></div>
+        <div class="gradient-accent gradient-accent-2"></div>
+        <div class="gradient-accent gradient-accent-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        {{> header }}
+
+        <!-- Tab Navigation -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="career">
+                <i class="fas fa-briefcase"></i>
+                <span>Career</span>
+            </button>
+            <button class="tab-btn" data-tab="stage">
+                <i class="fas fa-theater-masks"></i>
+                <span>Stage Credits</span>
+            </button>
+            <button class="tab-btn" data-tab="projects">
+                <i class="fas fa-code"></i>
+                <span>Projects</span>
+            </button>
+            <button class="tab-btn" data-tab="certifications">
+                <i class="fas fa-certificate"></i>
+                <span>Certifications</span>
+            </button>
+            <button class="tab-btn" data-tab="education">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-grid">
+                <!-- Tab Panels -->
+                <div class="tab-panels">
+                    <!-- Career Tab -->
+                    <div class="tab-panel active" id="career">
+                        {{> career }}
+                    </div>
+
+                    <!-- Stage Credits Tab -->
+                    <div class="tab-panel" id="stage">
+                        {{> stage-credits }}
+                    </div>
+
+                    <!-- Projects Tab -->
+                    <div class="tab-panel" id="projects">
+                        {{> projects }}
+                    </div>
+
+                    <!-- Certifications Tab -->
+                    <div class="tab-panel" id="certifications">
+                        {{> certifications }}
+                    </div>
+
+                    <!-- Education Tab -->
+                    <div class="tab-panel" id="education">
+                        {{> education }}
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    {{> sidebar }}
+                </aside>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="https://www.github.com/jsjohnstone" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jsjohnstone" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.jamiejohnstone.com" aria-label="Website">
+                    <i class="fas fa-globe-americas"></i>
+                </a>
+            </div>
+            <p class="footer-text">Built with ❤️ using Handlebars & Node.js</p>
+        </footer>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+        } else if (systemPrefersDark) {
+            html.setAttribute('data-theme', 'dark');
+        }
+        
+        // Update toggle icon
+        function updateToggleIcon() {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+        updateToggleIcon();
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateToggleIcon();
+        });
+
+        // Tab switching functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Update active states
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanels.forEach(p => p.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

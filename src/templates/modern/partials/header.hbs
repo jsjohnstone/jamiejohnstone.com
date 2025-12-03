@@ -1,0 +1,61 @@
+<header class="header">
+    <div class="header-content">
+        {{#with resume.basics}}
+        {{#if image}}
+        <img src="{{image}}" alt="{{name}}" class="header-avatar">
+        {{/if}}
+        <div class="header-info">
+            <h1 class="header-name">{{name}}</h1>
+            <p class="header-title">{{label}}</p>
+            {{#if summary}}
+            <p class="header-summary">{{summary}}</p>
+            {{/if}}
+            <div class="header-meta">
+                {{#if location.city}}
+                <div class="header-meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>{{location.city}}</span>
+                </div>
+                {{/if}}
+                {{#if email}}
+                <div class="header-meta-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:{{email}}">{{email}}</a>
+                </div>
+                {{/if}}
+                {{#if phone}}
+                <div class="header-meta-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:{{phone}}">{{phone}}</a>
+                </div>
+                {{/if}}
+                {{#if url}}
+                <div class="header-meta-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="{{url}}" target="_blank">{{url}}</a>
+                </div>
+                {{/if}}
+                {{#each profiles}}
+                <div class="header-meta-item">
+                    {{#if (eq network "LinkedIn")}}
+                    <i class="fab fa-linkedin"></i>
+                    {{else if (eq network "Github")}}
+                    <i class="fab fa-github"></i>
+                    {{else if (eq network "Twitter")}}
+                    <i class="fab fa-twitter"></i>
+                    {{else}}
+                    <i class="fas fa-link"></i>
+                    {{/if}}
+                    <a href="{{url}}" target="_blank">{{username}}</a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        {{/with}}
+    </div>
+</header>

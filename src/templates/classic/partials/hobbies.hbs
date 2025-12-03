@@ -1,0 +1,8 @@
+{{#if resume.interests.length}}
+    <h2>Hobbies</h2>
+    <ul class="skills">
+        {{#each resume.interests}}
+            {{#if name}}<li class="skills">{{name}}</li>{{/if}}
+        {{/each}}
+    </ul>
+{{/if}}

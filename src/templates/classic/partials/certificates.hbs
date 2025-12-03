@@ -1,0 +1,8 @@
+{{#if resume.awards.length}}
+	<h2>Certifications</h2>
+	{{#each resume.awards}}
+		<h4>{{#if title}}{{title}}{{/if}}</h4>
+		<p>{{#if awarder}}{{awarder}}{{/if}} - {{#if date}}{{dateFormat date format="MMM YYYY"}}{{/if}}</p>
+	{{/each}}
+	<hr>
+{{/if}}

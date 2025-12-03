@@ -1,0 +1,538 @@
+{
+    "basics": {
+        "name": "Jamie Johnstone",
+        "label": "Product Manager, Rower, Ticketing Geek, Ex-Stage Manager",
+        "image": "https://avatars2.githubusercontent.com/u/272156?s=460&u=cc48582b9eb37f6320c1a77824a5fa30e447aa70&v=4",
+        "email": "j@miej.co",
+        "phone": "+44 7383 617770",
+        "url": "https://jamiejohnstone.com",
+        "summary": "Experienced in cloud engineering and product management, I specialize in helping teams design and build scalable, secure, and cost-effective solutions in fast-paced, high-growth environments. I’m passionate about solving real-world problems through innovative, customer-centric products. Throughout my career, I’ve led and delivered successful projects across industries like ticketing, entertainment, and e-commerce—always with a focus on agile methodologies and best practices. I thrive in collaborative environments, enjoy sharing knowledge, and am constantly learning new skills. I'm always open to new challenges and opportunities that push me to grow—both professionally and personally.",
+        "location": {
+            "postalCode": "SW16",
+            "city": "London, United Kingdom",
+            "countryCode": "GB"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "jsjohnstone",
+                "url": "https://www.linkedin.com/in/jsjohnstone/"
+            },
+            {
+                "network": "Github",
+                "username": "jsjohnstone",
+                "url": "https://www.github.com/jsjohnstone/"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Kraken",
+            "position": "Staff Product Manager (Platform Reliability)",
+            "location": "London, United Kingdom",
+            "startDate": "2025-04-01",
+            "summary": "Leading product strategy and delivery for Kraken's Platform Reliability Group, supporting ~1500 engineers across the business to build and operate reliable, scalable systems that power energy utilities serving 70+ million customer accounts globally. This role brings together product management, platform engineering, and commercial expertise to enable teams to 'build safe and fast', maintaining Kraken's culture of rapid innovation while embedding reliability practices that help utilities make a big green dent in the climate crisis:",
+            "highlights": [
+                "Own roadmap for three teams delivering observability, incident management, and reliability initiatives across 200+ daily deployments to 25+ environments globally.",
+                "Manage incident management including all processes, tooling, and post-incident frameworks. Run fortnightly Platform Health Review for engineering leadership.",
+                "Drive Datadog observability strategy, launching company-wide training and enabling teams through self-service tools, consulting, and automated guardrails.",
+                "Report weekly to SMT on reliability metrics and work with engineering leaders to establish ownership frameworks and standards.",
+                "Shared ownership with Technical Lead on quarterly planning, reliability standards, and driving the 'build safe and fast' culture across Kraken."
+            ],
+            "url": "https://kraken.tech/",
+            "logo": "logos/kraken.png",
+            "keywords": []
+        },
+        {
+            "name": "Masabi",
+            "position": "Solutions Consultant",
+            "location": "London, United Kingdom",
+            "startDate": "2024-08-01",
+            "endDate": "2025-03-01",
+            "summary": "Worked at Masabi, a global leader in mobile ticketing and fare payment solutions for public transit, helping transit agencies modernise rider experiences:",
+            "highlights": [
+                "Led solution design for high-value, multimodal transit opportunities across the US, UK, and Europe, supporting procurements for large-scale transit authorities handling over half a billion annual trips.",
+                "Conducted in-depth RFP analysis to shape strategic responses and solutions, and developed compelling proposals tailored to complex client needs.",
+                "Delivered technical demonstrations and participated in evaluation interviews with transit agencies to articulate solution value and platform fit.",
+                "Collaborated deeply with Product, Engineering, and Sales teams, and contributed to cross-functional initiatives focused on process improvement, AI, and business expansion strategy."
+            ],
+            "url": "https://www.masabi.com/",
+            "logo": "logos/masabi.png",
+            "keywords": []
+        },
+        {
+            "name": "Amazon Web Services",
+            "position": "Startup Solutions Architect",
+            "location": "London, United Kingdom",
+            "startDate": "2022-07-04",
+            "endDate": "2024-07-30",
+            "summary": "Supported early-stage startups across the UK & Ireland as part of AWS’s Startup team, helping founders build scalable, secure infrastructure on the cloud:",
+            "highlights": [
+                "Advised startups in SaaS, Energy, Healthcare, and Social sectors on AWS architecture, with a focus on Kubernetes and reliability.",
+                "Co-created and hosted Let’s Build a Startup — a monthly Twitch series guiding founders through building MVPs on AWS.",
+                "Delivered talks, meetups, and live events focused on containers, platform reliability, and startup tech strategy.",
+                "Created technical content and contributed to team-wide initiatives to drive startup adoption and success on AWS."
+            ],
+            "url": "http://aws.amazon.com/",
+            "logo": "logos/aws.png",
+            "keywords": []
+        },
+        {
+            "name": "Ticket Tailor",
+            "position": "Senior Product Manager",
+            "location": "London, United Kingdom",
+            "startDate": "2021-08-02",
+            "endDate": "2022-07-03",
+            "summary": "Ticket Tailor is a simple, free event ticketing solution for events of all shapes and sizes. Led product strategy and delivery as the first Product hire at Ticket Tailor, a simple, independent ticketing platform used by event organisers worldwide:",
+            "highlights": [
+                "Built out the product function from scratch, introducing key tools, processes, and cross-team workflows.",
+                "Owned the roadmap for three core products, including the main ticketing platform and organiser dashboard.",
+                "Launched a new creator-focused marketing product.",
+                "Collaborated with the CEO and cross-functional leads to align product direction with company goals.",
+                "Led agile delivery cycles and prioritised features based on customer insight and business impact.",
+                "Advocated for UX simplicity and data-informed decision-making across the team."
+            ],
+            "url": "http://www.tickettailor.com/",
+            "logo": "logos/tickettailor.png",
+            "keywords": []
+        },
+        {
+            "name": "OpenCredo",
+            "position": "DevOps/Platform Engineering Consultant",
+            "location": "London, United Kingdom",
+            "startDate": "2021-01-11",
+            "endDate": "2021-08-01",
+            "summary": "OpenCredo is a pragmatic hands-on software and DevOps consultancy with a wealth of experience in open source technologies. Worked with clients to design and build distributed systems using cloud native technologies like Kubernetes, Kafka and Terraform on AWS and GCP.",
+            "url": "http://www.opencredo.com/",
+            "logo": "logos/opencredo.png",
+            "keywords": []
+        },
+        {
+            "name": "Masabi",
+            "position": "Product Manager",
+            "location": "London, United Kingdom",
+            "startDate": "2019-12-31",
+            "endDate": "2020-12-22",
+            "summary": "Managed road map and agile delivery for a tribe of 13 engineers, overseeing the lifecycle of several transit ticketing validation products including iOS/Android apps, backend (Java), SDKs and APIs, and turnkey hardware solutions (embedded Linux/Java), as well as technically contributing to solution design and delivery.",
+            "url": "http://www.masabi.com/",
+            "logo": "logos/masabi.png",
+            "keywords": []
+        },
+        {
+            "name": "Freelance",
+            "position": "Stage Manager/Technician",
+            "location": "London, United Kingdom",
+            "startDate": "2018-06-01",
+            "endDate": "2019-12-01",
+            "summary": "Strong career in live theatre, delivering technically complex productions in a variety of roles. Highlights included:",
+            "highlights": [
+                "Roles with leading companies, including Disney Theatrical Group, the Royal Shakespeare Company and the Edinburgh Fringe.",
+                "Using software development skills: creating a 'talking lightbulb' with Python, programming complex/dynamic lighting for an international tour.",
+                "Solving problems, adjusting solutions and working as a team to continuously improve using an iterative, agile-like model."
+            ],
+            "url": "https://www.jamiejohnstone.com",
+            "logo": "logos/sm.png",
+            "keywords": []
+        },
+        {
+            "name": "iTICKET",
+            "position": "Product/Operations Manager",
+            "location": "Auckland, New Zealand",
+            "startDate": "2016-10-01",
+            "endDate": "2018-05-31",
+            "summary": "Managed IT and field operations for events with up to 80,000 attendees for New Zealand's largest kiwi-owned ticketing company. Highlights included:",
+            "highlights": [
+                "Working closely with engineers to ensure smooth operation and development of Azure-hosted platform using Agile methodologies.",
+                "Providing training, documentation and support for staff and clients, including liaising with external IT teams/software developers to ensure successful deployment and integration of ticketing infrastructure.",
+                "Overseeing IT operations including purchasing, configuring and maintaining equipment, networking and software/services.",
+                "Contributing scripts/tools in Python and PHP to automate tasks and improve process, including integrating with ticketing and inventory APIs."
+            ],
+            "url": "https://www.iticket.co.nz/",
+            "logo": "logos/iticket.png",
+            "keywords": []
+        }
+    ],
+    "stageCredits": [
+        {
+            "year": "2019",
+            "role": "ASM (SM Cover)",
+            "show": "Disney's Aladdin (West End)",
+            "director": "Casey Nicholaw",
+            "company": "Disney Theatrical Group"
+        },
+        {
+            "year": "2018",
+            "role": "SM",
+            "show": "Ed Fringe Festival – Main Hall",
+            "director": "Hannah Moore",
+            "company": "Assembly Festival"
+        },
+        {
+            "year": "2018",
+            "role": "SM",
+            "show": "Jazz Festival – Main Hall",
+            "director": "Hannah Moore",
+            "company": "Assembly Festival"
+        },
+        {
+            "year": "2018",
+            "role": "SM",
+            "show": "Legacy Project V",
+            "director": "Bruce Brown",
+            "company": "The Legacy Project (NZ)"
+        },
+        {
+            "year": "2017",
+            "role": "DSM ",
+            "show": "WMG 2017 Opening Ceremony",
+            "director": "Mike Mizrahi",
+            "company": "World Master's Games"
+        },
+        {
+            "year": "2016",
+            "role": "SM",
+            "show": "Venus in Fur",
+            "director": "Shane Bosher",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2015",
+            "role": "SM",
+            "show": "Lysistrata",
+            "director": "Michael Hurst",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2015",
+            "role": "SM (Calling)",
+            "show": "Le Comique 2015",
+            "director": "Maria Deere",
+            "company": "NZ Comedy Trust"
+        },
+        {
+            "year": "2015",
+            "role": "SM (Calling)",
+            "show": "Old Mout Cider Comedy Gala 2015",
+            "director": "Maria Deere",
+            "company": "NZ Comedy Trust"
+        },
+        {
+            "year": "2015",
+            "role": "SM (Calling)",
+            "show": "Night of the Queer 2015",
+            "director": "MM Hollins",
+            "company": "TAPAC"
+        },
+        {
+            "year": "2014",
+            "role": "DSM ",
+            "show": "Little Mermaid Jr.",
+            "director": "Jonathan Alver",
+            "company": "National Youth Theatre Co"
+        },
+        {
+            "year": "2014",
+            "role": "ASM",
+            "show": "The Good Soul of Szechuan",
+            "director": "Colin McColl",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2014",
+            "role": "ASM",
+            "show": "Once on Chunuk Bair",
+            "director": "Ian Mune",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2014",
+            "role": "SM Swing",
+            "show": "Paniora!",
+            "director": "Colin McColl",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2014",
+            "role": "ASM",
+            "show": "Sea (World Premiere)",
+            "director": "Julie Nolan",
+            "company": "Red Leap Theatre Company"
+        },
+        {
+            "year": "2013",
+            "role": "SM",
+            "show": "Like There's No Tomorrow",
+            "director": "Robin Kerr",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2016",
+            "role": "PM",
+            "show": "Next Big Thing 2016",
+            "director": "Lynne Cardy",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2016",
+            "role": "PM / LX Op",
+            "show": "All Your Wants and Needs (UK Tour)",
+            "director": "Robin Kerr",
+            "company": "The Playground Collective"
+        },
+        {
+            "year": "2015",
+            "role": "PM",
+            "show": "Jesus Christ Part II",
+            "director": "Oliver Driver",
+            "company": "Basement Theatre Trust"
+        },
+        {
+            "year": "2015",
+            "role": "PM",
+            "show": "Young and Hungry 2015",
+            "director": "Gabrielle Rhodes",
+            "company": "Basement Theatre Trust"
+        },
+        {
+            "year": "2015",
+            "role": "Venue Manager",
+            "show": "Auckland Arts Festival 2015",
+            "director": "Jo Kilgour",
+            "company": "Auckland Arts Festival Trust"
+        },
+        {
+            "year": "2014",
+            "role": "PM",
+            "show": "Hauraki Horror",
+            "director": "Rachel House",
+            "company": "Basement Theatre Trust"
+        },
+        {
+            "year": "2014",
+            "role": "PM",
+            "show": "Young and Hungry 2014",
+            "director": "Leon Wadham",
+            "company": "Basement Theatre Trust"
+        },
+        {
+            "year": "2014",
+            "role": "PM",
+            "show": "In Flagrante (NZ Tour 2014)",
+            "director": "Mary-Jane O'Reilly",
+            "company": "Flagrant Productions"
+        },
+        {
+            "year": "2013",
+            "role": "Production Assistant",
+            "show": "The Arrival (Asia Tour)",
+            "director": "Julie Nolan",
+            "company": "Red Leap Theatre Company"
+        },
+        {
+            "year": "2016",
+            "role": "LX Op / Programmer",
+            "show": "That Bloody Woman",
+            "director": "Kip Chapman",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2015",
+            "role": "LX Swing",
+            "show": "Guys and Dolls",
+            "director": "Raymond Hawthorne",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2015",
+            "role": "LX Op",
+            "show": "Enlightenment",
+            "director": "Andrew Foster",
+            "company": "Auckland Theatre Company"
+        },
+        {
+            "year": "2014",
+            "role": "LX Op",
+            "show": "NZ International Comedy Fest 2014",
+            "director": "Maria Deere",
+            "company": "NZ Comedy Trust"
+        },
+        {
+            "year": "2013",
+            "role": "LX Op",
+            "show": "Aladdin Jr",
+            "director": "Jonathan Alver",
+            "company": "National Youth Theatre Co"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Tech Returners 'Tech For Good' Project – 'The Sentimentalists'",
+            "roles": [
+                "Developer"
+            ],
+            "description": "As part of the Tech Returners 'Your Return To Tech' programme, built an app that helps users identify 'fake news' by combining NLP and external fact-check data sources in a friendly user interface. Built on AWS using Lambda (Python), API Gateway, X-Ray, ReactJS, Material-UI and deployed with Github Actions and Terraform.",
+            "url": "https://github.com/TheSentimentalists",
+            "keywords": [
+                "AWS",
+                "Serverless",
+                "API Gateway",
+                "ReactJS",
+                "Material-UI",
+                "Github Actions",
+                "Terraform"
+            ]
+        },
+        {
+            "name": "jamiejohnstone.com",
+            "roles": [
+                "Developer"
+            ],
+            "description": "A playground for learning and experimenting with automated deployment pipelines including S3 websites, CloudFormation/Terraform, Jenkins/CircleCI/Github Actions, and Kubernetes/Docker.",
+            "url": "https://www.github.com/jsjohnstone/jamiejohnstone.com",
+            "keywords": [
+                "AWS",
+                "CI/CD",
+                "Terraform",
+                "Containers",
+                "DevOps"
+            ]
+        },
+        {
+            "name": "Talking Lightbulb ('All Your Wants And Needs' International Tour)",
+            "description": "A Python application that converted sound input into DMX (theatre lighting control protocol) commands, allowing an on-stage lightbulb to 'speak'.",
+            "url": "https://github.com/jsjohnstone/talking-lightbulb",
+            "keywords": [
+                "Python",
+                "DMX",
+                "Sound/Light",
+                "Theatre"
+            ]
+        },
+        {
+            "name": "Tixy, an open event ticketing platform",
+            "description": "Lead development of a modern event ticketing platform, built on AWS with PHP/SQL/Perl to satisfy the growing needs of New Zealand's community arts.",
+            "keywords": [
+                "AWS",
+                "PHP/MySQL",
+                "Perl",
+                "Ticketing"
+            ]
+        },
+        {
+            "name": "Comp Ticket Manager (NZ International Comedy Festival)",
+            "description": "A web app built in PHP/MySQL/HTML/jQuery to manage requests, approvals and allocation of complimentary tickets for 230 shows across 13 ticketing providers, including generating PDF reports and sending approval emails.",
+            "keywords": [
+                "PHP/MySQL",
+                "Ticketing"
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "Certified Kubernetes Security Specialist (CKS)",
+            "awarder": "Cloud Native Computing Foundation (CNCF)",
+            "date": "2023-12-16"
+        },
+        {
+            "title": "AWS Certified Solutions Architect (Professional)",
+            "awarder": "Amazon Web Services",
+            "date": "2023-03-16"
+        },
+        {
+            "title": "Certified Kubernetes Administrator (CKA)",
+            "awarder": "Cloud Native Computing Foundation (CNCF)",
+            "date": "2021-01-04"
+        },
+        {
+            "title": "Terraform Associate",
+            "awarder": "HashiCorp",
+            "date": "2020-12-26"
+        },
+        {
+            "title": "AWS Certified Solutions Architect (Associate)",
+            "awarder": "Amazon Web Services",
+            "date": "2020-05-01"
+        },
+        {
+            "title": "Cloud DevOps Engineer (Nanodegree)",
+            "awarder": "Udacity",
+            "date": "2020-04-01"
+        },
+        {
+            "title": "Professional Scrum Product Owner (PSPO I)",
+            "awarder": "Scrum.org",
+            "date": "2019-10-01"
+        }
+    ],
+    "education": [
+        {
+            "institution": "Unitec Institute of Technology",
+            "area": "BPSA Production Design and Management",
+            "studyType": "Bachelor's Degree",
+            "startDate": "2011-12-31",
+            "endDate": "2013-12-31"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Cloud Platforms: AWS, GCP"
+        },
+        {
+            "name": "Frontend: React, JS, CSS, Bootstrap"
+        },
+        {
+            "name": "Backend: Python, PHP, Java, SQL"
+        },
+        {
+            "name": "Infrastructure as Code: Terraform, CloudFormation"
+        },
+        {
+            "name": "Containers: Docker, Kubernetes"
+        },
+        {
+            "name": "Configuration: Ansible"
+        },
+        {
+            "name": "CI/CD: Jenkins, Github Actions"
+        },
+        {
+            "name": "Monitoring: Prometheus, AWS CloudWatch"
+        },
+        {
+            "name": "Continuous Learning"
+        },
+        {
+            "name": "Pair Programming"
+        },
+        {
+            "name": "Test Driven Development"
+        },
+        {
+            "name": "Collaboration & Teamwork"
+        },
+        {
+            "name": "Internal & External Stakeholder Management"
+        },
+        {
+            "name": "Product Management"
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native speaker"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Rowing"
+        },
+        {
+            "name": "Theatre/Live Events"
+        },
+        {
+            "name": "Travelling"
+        }
+    ],
+    "references": []
+}

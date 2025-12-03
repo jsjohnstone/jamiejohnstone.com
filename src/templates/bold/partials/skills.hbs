@@ -1,0 +1,19 @@
+<h2 class="section-title">Skills & Interests</h2>
+{{#if resume.skills.length}}
+<div class="skills-grid">
+    {{#each resume.skills}}
+    <div class="skill-item">{{name}}</div>
+    {{/each}}
+</div>
+{{/if}}
+
+{{#if resume.interests.length}}
+<div class="interests-section">
+    <h3 class="interests-title">Interests</h3>
+    <div class="interests-list">
+        {{#each resume.interests}}
+        <span class="interest-tag">{{name}}</span>
+        {{/each}}
+    </div>
+</div>
+{{/if}}

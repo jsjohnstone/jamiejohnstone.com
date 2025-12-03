@@ -1,0 +1,26 @@
+<h2 class="section-title">Projects</h2>
+{{#if resume.projects.length}}
+{{#each resume.projects}}
+<article class="project-item">
+    <h3 class="project-name">
+        {{#if url}}
+        <a href="{{url}}" target="_blank">{{name}} <i class="fas fa-external-link-alt fa-xs"></i></a>
+        {{else}}
+        {{name}}
+        {{/if}}
+    </h3>
+    {{#if description}}
+    <p class="project-description">{{description}}</p>
+    {{/if}}
+    {{#if keywords.length}}
+    <div class="work-keywords">
+        {{#each keywords}}
+        <span class="keyword-tag">{{.}}</span>
+        {{/each}}
+    </div>
+    {{/if}}
+</article>
+{{/each}}
+{{else}}
+<p>No projects available.</p>
+{{/if}}

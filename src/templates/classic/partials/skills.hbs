@@ -1,0 +1,10 @@
+{{#if resume.skills.length}}
+    <h2 class="top-skills">Skills</h2>
+    <ul class="skills">
+        {{#each resume.skills}}
+            {{#if name}}<li class="skills {{#if level}}skills-level-override{{/if}}">{{name}}
+                {{#if level}}<div class="progress" style="height:5px"><div class="progress-bar skills-progress-bar" style="width:{{level}}%;height:5px"></div></div>{{/if}}</li>
+            {{/if}}
+        {{/each}}
+    </ul>
+{{/if}}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+        __    _    __  __                   __
+       / /_  (_)  / /_/ /_  ___  ________  / /
+      / __ \/ /  / __/ __ \/ _ \/ ___/ _ \/ / 
+     / / / / /  / /_/ / / /  __/ /  /  __/_/  
+    /_/ /_/_/   \__/_/ /_/\___/_/   \___(_)   
+                                          
+    Thanks for checking out my resume (and behind the scenes!)
+
+    This page is generated automagically from a JSON file and template, both hosted 
+    on Github and built with node and Github Actions.
+
+    For a behind-the-scenes peek, check out: https://github.com/jsjohnstone/resume
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#resume.basics}}{{name}} - {{label}}{{/resume.basics}}</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c91a1c1eae.js" crossorigin="anonymous"></script>
+
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="./hand.ico">
+</head>
+
+<body>
+    <!-- Header Section -->
+    {{> header }}
+    
+    <!-- Jump Navigation -->
+    <nav class="jump-nav">
+        <div class="jump-nav-inner">
+            <!-- Nav Brand -->
+            <div class="nav-brand">
+                {{#with resume.basics}}
+                <span class="nav-brand-name">{{name}}</span>
+                {{/with}}
+            </div>
+            
+            <!-- Navigation Links (Desktop) -->
+            <div class="jump-links">
+                <a href="#career" class="jump-link" data-portrait-target="career">Tech CV</a>
+                <a href="#stage" class="jump-link" data-portrait-target="stage">Theatre Credits</a>
+                <a href="#education" class="jump-link">Education</a>
+                <a href="#contact" class="jump-link">Get In Touch</a>
+            </div>
+            
+            <!-- Right side: Social Links + Burger Menu -->
+            <div class="nav-right">
+                <div class="nav-social">
+                    {{#each resume.basics.profiles}}
+                    {{#if (eq network "Github")}}
+                    <a href="{{url}}" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    {{/if}}
+                    {{#if (eq network "LinkedIn")}}
+                    <a href="{{url}}" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    {{/if}}
+                    {{/each}}
+                </div>
+                
+                <!-- Burger Menu Button (Mobile) -->
+                <button class="burger-menu" id="burgerMenu" aria-label="Open menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="#career" class="mobile-menu-link">Tech CV</a>
+            <a href="#stage" class="mobile-menu-link">Theatre Credits</a>
+            <a href="#education" class="mobile-menu-link">Education</a>
+            <a href="#contact" class="mobile-menu-link">Get In Touch</a>
+        </div>
+    </div>
+
+    <!-- Career Section -->
+    <section id="career" class="section section-career">
+        <div class="section-inner">
+            {{> career }}
+        </div>
+    </section>
+
+    <!-- Stage Credits Section -->
+    <section id="stage" class="section section-stage">
+        <div class="section-inner">
+            {{> stage-credits }}
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-education">
+        <div class="section-inner">
+            {{> education }}
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section id="contact" class="section section-contact">
+        <div class="section-inner">
+            {{> contact }}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-text"><b>Built with ❤️ in London, UK using Handlebars, Node.js & Github Actions</b></p>
+            <p class="footer-text">Copyright &copy; Jamie Johnstone</p>
+
+        </div>
+    </footer>
+
+    <script>
+        // Burger menu toggle
+        const burgerMenu = document.getElementById('burgerMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-menu-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                // Close menu
+                burgerMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                
+                // Scroll to target after a short delay
+                setTimeout(() => {
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
+            });
+        });
+
+        // Smooth scroll for desktop jump navigation
+        document.querySelectorAll('.jump-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Update active link on scroll
+        const sections = document.querySelectorAll('.section');
+        const jumpLinks = document.querySelectorAll('.jump-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollY = window.scrollY;
+            
+            // Find current section
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            // Update active navigation link
+            jumpLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Portrait hover interactions
+        const headerImages = document.querySelector('.header-images');
+        const interactivePortraits = document.querySelectorAll('.portrait-interactive');
+        
+        // Portrait hover events - each portrait is individual
+        interactivePortraits.forEach(portrait => {
+            const target = portrait.dataset.target;
+            
+            portrait.addEventListener('mouseenter', () => {
+                // Add active state to container
+                headerImages.classList.add('portrait-hover-active');
+                // Only highlight THIS portrait
+                portrait.classList.add('portrait-hovered');
+                // Highlight the nav link
+                const targetLink = document.querySelector(`.jump-link[href="#${target}"]`);
+                if (targetLink) {
+                    targetLink.classList.add('portrait-highlight');
+                }
+            });
+            
+            portrait.addEventListener('mouseleave', () => {
+                // Remove active state from container
+                headerImages.classList.remove('portrait-hover-active');
+                // Remove highlight from this portrait
+                portrait.classList.remove('portrait-hovered');
+                // Remove nav highlight
+                const targetLink = document.querySelector(`.jump-link[href="#${target}"]`);
+                if (targetLink) {
+                    targetLink.classList.remove('portrait-highlight');
+                }
+            });
+            
+            // Click to navigate to section
+            portrait.addEventListener('click', () => {
+                const targetSection = document.querySelector(`#${target}`);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Reverse interaction: Nav link hover highlights only PRIMARY portrait of that type
+        document.querySelectorAll('.jump-link[data-portrait-target]').forEach(link => {
+            const targetType = link.dataset.portraitTarget;
+            
+            link.addEventListener('mouseenter', () => {
+                headerImages.classList.add('portrait-hover-active');
+                // Only highlight the primary portrait for this section
+                interactivePortraits.forEach(p => {
+                    if (p.dataset.target === targetType && p.dataset.navPrimary === 'true') {
+                        p.classList.add('portrait-hovered');
+                    }
+                });
+                link.classList.add('portrait-highlight');
+            });
+            
+            link.addEventListener('mouseleave', () => {
+                headerImages.classList.remove('portrait-hover-active');
+                // Remove highlight from all portraits
+                interactivePortraits.forEach(p => {
+                    p.classList.remove('portrait-hovered');
+                });
+                link.classList.remove('portrait-highlight');
+            });
+        });
+    </script>
+</body>
+
+</html>
